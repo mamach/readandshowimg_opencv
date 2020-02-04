@@ -20,7 +20,7 @@ height, width = template.shape
 result = cv2.matchTemplate(image, template,cv2.TM_CCOEFF_NORMED)  
 origin = np.unravel_index(result.argmax(),result.shape)
 # pdb.set_trace()
-print (np.unravel_index(result.argmax(),result.shape))
+print(np.unravel_index(result.argmax(),result.shape))
 
 roi = image[origin[0]:origin[0]+height, origin[1]:origin[1]+width]
 # roi = image[530:(530+width), 130:(130+height)]
